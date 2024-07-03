@@ -5,6 +5,8 @@
 //   { id: 3, name: "laptop", packed: false },
 // ];
 
+// import { initialItems } from "../lib/constants";
+
 export default function ItemList({ items }) {
   return (
     <ul>
@@ -23,7 +25,7 @@ function Item({ item }) {
   return (
     <li className="item">
       <label>
-        <input type="checkbox" /> {item.name}
+        <input checked={item.packed} type="checkbox" /> {item.name}
       </label>
 
       <button>❌</button>
